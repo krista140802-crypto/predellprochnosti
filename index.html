@@ -198,14 +198,23 @@
   <div class="wrap teaser__wrap">
     <p class="block-label center" data-reveal>Премьера фильма</p>
     <h2 class="display teaser__title" data-reveal>2028</h2>
-    <div class="video-frame" id="videoFrame" data-reveal>
-      <button class="video-frame__play" type="button" aria-label="Тизер скоро">
-        <svg viewBox="0 0 100 100" aria-hidden="true"><polygon points="38,28 38,72 74,50"/></svg>
-      </button>
-      <span class="video-frame__caption">тизер скоро</span>
-      <span class="video-frame__corner tl"></span><span class="video-frame__corner tr"></span>
-      <span class="video-frame__corner bl"></span><span class="video-frame__corner br"></span>
+    
+    <!-- ВИДЕО ВКОНТАКТЕ -->
+    <div class="video-frame" id="videoFrame" data-reveal style="position:relative; overflow:hidden; padding-bottom:56.25%; height:0;">
+      <iframe 
+        src="https://vk.com/video_ext.php?oid=258696727&id=456239220&hash=4f8e4fb1f17a64de" 
+        style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"
+        allow="autoplay; encrypted-media; fullscreen; picture-in-picture;"
+        allowfullscreen
+        loading="lazy"
+      ></iframe>
+      <!-- Декоративные уголки (оставляем для дизайна) -->
+      <span class="video-frame__corner tl"></span>
+      <span class="video-frame__corner tr"></span>
+      <span class="video-frame__corner bl"></span>
+      <span class="video-frame__corner br"></span>
     </div>
+
     <p class="teaser__text" data-reveal>Оставьте почту, чтобы первыми узнать о выходе фильма в 160-летний юбилей Лолейта и получить приглашение на закрытый показ.</p>
     <form class="subscribe" id="subscribeForm" novalidate data-reveal>
       <div class="subscribe__row">
