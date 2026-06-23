@@ -1,0 +1,10 @@
+Сюда положите готовый видео-тизер, например teaser.mp4.
+
+После этого в index.html, в блоке «9. VIDEO TEASER», замените содержимое
+<div class="video-frame"> ... </div> на:
+
+  <video class="video-frame" controls poster="assets/images/teaser-poster.jpg">
+    <source src="assets/video/teaser.mp4" type="video/mp4">
+  </video>
+
+Сейчас вместо ролика показывается аккуратная рамка-плейсхолдер с надписью «тизер скоро».

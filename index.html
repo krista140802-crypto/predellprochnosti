@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#050505">
+<title>Предел прочности — дело Артура Лолейта</title>
+<meta name="description" content="Интерактивный спецпроект о русском инженере Артуре Фердинандовиче Лолейте — пионере железобетона, чьё имя стёрли из истории.">
+<link rel="preload" href="assets/fonts/GuildensternNbp.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="assets/fonts/JetBrainsMono.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- grain + scroll progress -->
+<div class="grain" aria-hidden="true"></div>
+<div class="scroll-progress" aria-hidden="true"><i id="progressBar"></i></div>
+
+<!-- floating wordmark (appears after hero) -->
+<header class="wordmark" id="wordmark" aria-hidden="true">
+  <span class="wordmark__title">ПРЕДЕЛ&nbsp;ПРОЧНОСТИ</span>
+  <span class="wordmark__sub">дело А. Ф. Лолейта</span>
+</header>
+
+<!-- ============ 1. HERO ============ -->
+<section class="hero" id="hero">
+  <div class="hero__spot" aria-hidden="true"></div>
+  <div class="hero__grid">
+    <div class="hero__text">
+      <p class="hero__kicker" data-reveal>цифровая экспозиция</p>
+      <h1 class="hero__title">
+        <span class="line" data-reveal>ПРЕДЕЛ</span>
+        <span class="line" data-reveal>ПРОЧНОСТИ</span>
+      </h1>
+      <p class="hero__subtitle" data-reveal>Дело Артура Лолейта</p>
+      <figure class="quote-frame hero__epigraph" data-reveal>
+        <blockquote>Великие личности всегда наталкиваются на яростное противодействие посредственных умов</blockquote>
+        <figcaption>— Альберт Эйнштейн</figcaption>
+      </figure>
+    </div>
+    <div class="hero__figure" data-parallax="0.12">
+      <img src="assets/images/hero-figure.png" alt="Артур Фердинандович Лолейт под лучом света" fetchpriority="high">
+    </div>
+  </div>
+  <a class="scroll-cue" href="#prologue" aria-label="Листать вниз">
+    <span>листать</span><i class="scroll-cue__arrow">↓</i>
+  </a>
+</section>
+
+<!-- ============ 2. PROLOGUE ============ -->
+<section class="section prologue" id="prologue">
+  <div class="wrap two-col">
+    <div class="col-text" data-reveal>
+      <p class="block-label">Пролог · бетон и трагедия</p>
+      <p class="lead">Бетон окружает нас повсюду: мы живём в бетонных зданиях, которые, в свою очередь, стоят на железобетонных перекрытиях. Однако мы даже не догадываемся, как разработка методов конструирования таких сооружений привела их изобретателя к трагедии.</p>
+      <p>4 июня 1933 года инженер А. Ф. Лолейт покончил жизнь самоубийством, бросившись под поезд на станции «Перловская» Московско-Ярославской железной дороги. Ему было 64 года.</p>
+      <figure class="quote-frame" data-reveal>
+        <blockquote>В тот момент, когда конференция присоединится к этому положению, я буду считать свою задачу законченной в том смысле, что я буду считать себя до некоторой степени пророком, вопиющим в пустыне.</blockquote>
+        <figcaption>— Артур Фердинандович Лолейт, 1930 год</figcaption>
+      </figure>
+      <p>Эти слова инженер Артур Лолейт произнёс на Первой Всесоюзной конференции по бетону и железобетону. Лолейт предложил новый способ расчёта железобетонных конструкций, который помог бы точнее понимать предел прочности сооружений.</p>
+    </div>
+    <div class="col-figure" data-reveal data-parallax="0.08">
+      <img src="assets/images/portrait-slit.png" alt="Портрет А. Ф. Лолейта" loading="lazy">
+      <p class="figure-caption">Артур Фердинандович Лолейт<br>1868 — 1933</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. REJECTED IDEA ============ -->
+<section class="section rejected" id="rejected">
+  <figure class="rejected__media" data-reveal data-parallax="0.05">
+    <img src="assets/images/rejected-concrete.png" alt="Разрушенный железобетон" loading="lazy">
+  </figure>
+  <div class="wrap">
+    <div class="rejected__text" data-reveal>
+      <p class="block-label">Отвергнутая идея · потеря авторства</p>
+      <p class="big-statement">Комиссия отвергла этот проект… А через восемь лет, в 1938 году, он лёг в основу советских норм расчёта железобетона. Но без указания авторства Лолейта.</p>
+      <p>В 1948 году вышла книга под редакцией В. М. Келдыша — главного противника инженера. О вкладе Лолейта в ней не было сказано ни слова.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. MAP ============ -->
+<section class="section map-section" id="map">
+  <div class="wrap map-layout">
+    <div class="map-intro" data-reveal>
+      <h2 class="display map-title">КАРТА<br>МОСКВЫ</h2>
+      <p class="map-subtitle">Проекты А. Ф. Лолейта</p>
+      <p class="map-period">1892 — 1927</p>
+      <span class="pixel-dots" aria-hidden="true"></span>
+      <p>Артур Лолейт одним из первых в мире начал применять железобетон в конце XIX века, опередив американцев в изобретении безбалочных перекрытий.</p>
+      <p>Наследие Лолейта окружает нас повсюду. Только в Москве он спроектировал и построил более десятка известных зданий.</p>
+    </div>
+
+    <div class="map-stage" data-reveal>
+      <div class="map-canvas" id="mapCanvas">
+        <svg id="mapSvg" viewBox="0 0 1000 1000" role="img" aria-label="Карта Москвы с проектами Лолейта">
+          <g id="mapDecor"></g>
+          <g id="mapMarkers"></g>
+        </svg>
+        <div class="map-tooltip" id="mapTooltip" hidden></div>
+      </div>
+    </div>
+
+    <ol class="map-list" id="mapList" data-reveal aria-label="Список проектов"></ol>
+  </div>
+</section>
+
+<!-- ============ 5. HERITAGE CARDS ============ -->
+<section class="section heritage" id="heritage">
+  <div class="wrap">
+    <div class="heritage__head" data-reveal>
+      <h2 class="display">НАСЛЕДИЕ<br>ЛОЛЕЙТА</h2>
+      <p class="map-subtitle">Сквозь время</p>
+      <p class="heritage__intro">Конец XIX — начало XX века. Промышленность в России набирает обороты: строятся заводы, фабрики, вокзалы, торговые пассажи… В это время Артур Лолейт работает на стыке инженерии и конструктивной эстетики.</p>
+      <p class="ba-hint" aria-hidden="true">Тяните шторку на снимках: <b>тогда</b> ↔ <b>сейчас</b></p>
+    </div>
+    <div class="cards" id="cards"></div>
+  </div>
+</section>
+
+<!-- ============ 6. PRESSURE ============ -->
+<section class="section pressure" id="pressure">
+  <div class="wrap two-col two-col--reverse">
+    <div class="col-figure pressure__figure" data-reveal data-parallax="0.1">
+      <img src="assets/images/portrait-beam.png" alt="А. Ф. Лолейт под вертикальным лучом света" loading="lazy">
+    </div>
+    <div class="col-text" data-reveal>
+      <p class="block-label">Давление системы</p>
+      <h2 class="display pressure__title">НЕ СОБИРАЛСЯ<br>ОТСТУПАТЬ</h2>
+      <p class="lead">Уверенный в своей правоте и сердцем болеющий за успех дела, Артур Фердинандович не собирался отступать. Он шёл против большинства, его жизнь стала невыносимой.</p>
+      <figure class="quote-frame" data-reveal>
+        <blockquote>Я видел Лолейта незадолго до смерти. Он был невероятно угнетён и измучен. Говорил, что собирается уходить из Военной академии (кафедру железобетонных конструкций, где Лолейт работал, возглавлял всё тот же В. М. Келдыш. — Е. Ш.), что его бьют за всякое проявленное желание приносить пользу.</blockquote>
+        <figcaption>— из дневника С. В. Шухова</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7. HEART INTERACTIVE ============ -->
+<section class="section heart" id="heart">
+  <div class="wrap">
+    <div class="heart__stage" data-reveal>
+      <div class="heart__scene" id="heartScene" role="button" tabindex="0"
+           aria-label="Коснитесь бетонного сердца">
+        <img src="assets/images/heart-1.png" alt="" class="heart__img is-active" data-stage="0">
+        <img src="assets/images/heart-2.png" alt="" class="heart__img" data-stage="1" loading="lazy">
+        <img src="assets/images/heart-3.png" alt="" class="heart__img" data-stage="2" loading="lazy">
+        <span class="heart__flash" aria-hidden="true"></span>
+        <span class="heart__touch-hint" id="heartHint">коснитесь</span>
+      </div>
+    </div>
+
+    <div class="heart__body">
+      <div class="heart__lead" data-reveal>
+        <h2 class="display">ЧТО ОСТАЁТСЯ<br>ОТ ИНЖЕНЕРОВ?</h2>
+        <p class="lead">Формулы, схемы, чертежи? Или здания, в основе которых лежат их разработки?</p>
+        <p class="heart__instruction">Сделайте выбор: коснитесь сердца или возьмите один из инструментов инженера. Инструмент инженера — продолжение его мысли.</p>
+        <div class="tools" id="tools" role="group" aria-label="Инструменты инженера">
+          <button class="tool" type="button" data-tool data-flavor="">Линейка</button>
+          <button class="tool" type="button" data-tool data-flavor="Циркуль вычерчивает окружность времени. Лолейт соединил несоединимое: железо и бетон в монолит.">Циркуль</button>
+          <button class="tool" type="button" data-tool data-flavor="Карандаш оставляет след на чертеже. Каждая линия — вызов. «Борьба с мёртвыми массами — долг зодчего».">Карандаш</button>
+        </div>
+        <p class="tools__caption" id="toolCaption" aria-hidden="true"></p>
+      </div>
+
+      <div class="heart__plate" id="heartPlate" data-reveal>
+        <span class="heart__counter" id="heartCounter">00 / 05</span>
+        <p class="heart__message" id="heartMessage" aria-live="polite">Коснитесь сердца или возьмите инструмент — наследие отзовётся.</p>
+      </div>
+    </div>
+
+    <figure class="quote-frame heart__final" id="heartFinal" hidden>
+      <blockquote>Гений, как передовой разведчик войска, нередко забегает слишком далеко вперёд… Он предлагает часто слишком многое, слишком новое, за ним толпа следовать не может и, уморивши его голодом, ставит ему памятник много позже. &lt;…&gt; Но гений, как и природа, не может поступать иначе, чем поступает.</blockquote>
+      <figcaption>— инженер и философ техники П. К. Энгельмейер</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ 8. FORGOTTEN NAME ============ -->
+<section class="section forgotten" id="forgotten">
+  <div class="wrap two-col">
+    <div class="col-text" data-reveal>
+      <h2 class="display">ЗАБЫТОЕ<br>ИМЯ</h2>
+      <p class="lead">Артур Фердинандович Лолейт так и не увидел признания своей теории. Он покоится в скромной могиле на Введенском кладбище, а его имя осталось забытым.</p>
+      <p>О вкладе Артура Лолейта не знает почти никто — разве что студенты профильных специальностей. А между тем его инженерные решения до сих пор используют во всём мире.</p>
+      <p>Каждый день тысячи людей проходят мимо его работ, пользуются его достижениями. ГУМ, башня Моссельпрома, своды старых церквей в Токмаковом переулке… Имя Лолейта стёрли из истории железобетона, но благодаря его инженерной мысли эти и другие здания крепко стоят до сих пор.</p>
+    </div>
+    <figure class="forgotten__figure" data-reveal data-parallax="0.05">
+      <img src="assets/images/forgotten-figure.jpg" alt="Светящаяся фигура — забытый инженер" loading="lazy">
+    </figure>
+  </div>
+</section>
+
+<!-- ============ 9. VIDEO TEASER ============ -->
+<section class="section teaser" id="teaser">
+  <div class="wrap teaser__wrap">
+    <p class="block-label center" data-reveal>Премьера фильма</p>
+    <h2 class="display teaser__title" data-reveal>2028</h2>
+    <div class="video-frame" id="videoFrame" data-reveal>
+      <button class="video-frame__play" type="button" aria-label="Тизер скоро">
+        <svg viewBox="0 0 100 100" aria-hidden="true"><polygon points="38,28 38,72 74,50"/></svg>
+      </button>
+      <span class="video-frame__caption">тизер скоро</span>
+      <span class="video-frame__corner tl"></span><span class="video-frame__corner tr"></span>
+      <span class="video-frame__corner bl"></span><span class="video-frame__corner br"></span>
+    </div>
+    <p class="teaser__text" data-reveal>Оставьте почту, чтобы первыми узнать о выходе фильма в 160-летний юбилей Лолейта и получить приглашение на закрытый показ.</p>
+    <form class="subscribe" id="subscribeForm" novalidate data-reveal>
+      <div class="subscribe__row">
+        <input class="subscribe__input" id="emailInput" type="email" name="email"
+               placeholder="ваш e-mail" autocomplete="email" aria-label="Электронная почта" required>
+        <button class="subscribe__btn" type="submit">Оставить почту</button>
+      </div>
+      <p class="subscribe__msg" id="subscribeMsg" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ============ 10. FOOTER ============ -->
+<footer class="footer" id="footer">
+  <div class="wrap">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <span class="footer__title display">ПРЕДЕЛ ПРОЧНОСТИ</span>
+        <span class="footer__tag">цифровая экспозиция · дело Артура Лолейта</span>
+      </div>
+      <ul class="footer__credits">
+        <li><span class="footer__name">Виктор Борзенко</span><span class="footer__role">куратор проекта</span></li>
+        <li><span class="footer__name">Ксения Лощенко</span><span class="footer__role">автор проекта, креативный продюсер и создатель визуала</span></li>
+        <li><span class="footer__name">Анастасия Жалий</span><span class="footer__role">редактор-исследователь</span></li>
+        <li><span class="footer__name">Кристина Солдатенкова</span><span class="footer__role">редактор-исследователь</span></li>
+      </ul>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 · Предел прочности</span>
+      <span>Мою биографию ищите в моих работах. — А. Ф. Лолейт</span>
+    </div>
+    <p class="footer__fontcredit">Заголовки — пиксельный шрифт Guildenstern NBP © Nate Halley, CC&nbsp;BY-SA&nbsp;3.0</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
